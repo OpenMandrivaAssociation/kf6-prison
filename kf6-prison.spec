@@ -26,6 +26,11 @@ BuildRequires: doxygen
 BuildRequires: cmake(Qt6ToolsTools)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6QuickTest)
+BuildRequires: cmake(Qt6Quick)
+BuildRequires: cmake(Qt6Multimedia)
+BuildRequires: pkgconfig(libqrencode)
+BuildRequires: pkgconfig(libdmtx)
+BuildRequires: cmake(ZXing)
 Requires: %{libname} = %{EVRD}
 
 %description
