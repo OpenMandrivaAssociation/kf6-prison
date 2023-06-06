@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Prison
 %define devname %mklibname KF6Prison -d
-%define git 20230605
+%define git 20230606
 
 Name: kf6-prison
 Version: 5.240.0
