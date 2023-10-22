@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Prison
 %define devname %mklibname KF6Prison -d
-%define git 20231013
+%define git 20231022
 
 Name: kf6-prison
 Version: 5.240.0
@@ -83,6 +83,8 @@ Barcode api currently offering a nice Qt api to produce QRCode barcodes and Data
 %{_libdir}/libKF6Prison.so*
 %dir %{_libdir}/qt6/qml/org/kde/prison
 %{_libdir}/qt6/qml/org/kde/prison/qmldir
+%{_libdir}/qt6/qml/org/kde/prison/*.version
+%{_libdir}/qt6/qml/org/kde/prison/*.qmltypes
 %{_libdir}/qt6/qml/org/kde/prison/*.so
 # Scanner
 %{_libdir}/libKF6PrisonScanner.so*
