@@ -75,6 +75,12 @@ Barcode api currently offering a nice Qt api to produce QRCode barcodes and Data
 
 %install
 %ninja_install -C build
+# @BUILD_SHARED_LIBS@ is ON, so this branch is dead. cmake.req still turns
+# every find_dependency() in it into a Requires, and nothing provides
+# cmake(Dmtx) or cmake(QRencode).
+sed -i '/^if (NOT ON)/,/^endif()/d' \
+	%{buildroot}%{_libdir}/cmake/KF6Prison/KF6PrisonConfig.cmake \
+	%{buildroot}%{_libdir}/cmake/KF6PrisonScanner/KF6PrisonScannerConfig.cmake
 
 %files
 %{_datadir}/qlogging-categories6/prison.*
